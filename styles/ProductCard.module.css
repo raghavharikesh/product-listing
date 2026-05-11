@@ -1,0 +1,168 @@
+/* styles/ProductCard.module.css */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Image Container */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 115%;
+  background: var(--light-gray);
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+/* Bookmark Button */
+.bookmarkBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  z-index: 2;
+  transition: background 0.2s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+
+.bookmarkBtn:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.bookmarkBtn.saved svg path {
+  fill: var(--text-primary);
+  stroke: var(--text-primary);
+}
+
+/* Category Badge */
+.badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: var(--white);
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+}
+
+/* Product Info */
+.info {
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Price Row */
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.priceGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--price-color);
+}
+
+.original {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--original-price);
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--discount-color);
+  background: #e8f5e9;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+/* Cart Button */
+.cartBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  color: var(--cart-icon);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.cartBtn:hover {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--white);
+}
+
+.cartBtn.added {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--white);
+}
