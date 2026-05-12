@@ -5,8 +5,7 @@ A dynamic product listing page built with **Next.js**, **Axios**, and deployed o
 ---
 
 ## 🖥️ Live Demo
-
-> **Netlify URL:** _(add your deployed URL here after deployment)_
+**[View Live Site](https://stunning-medovik-f4f349.netlify.app)**
 
 ---
 
@@ -47,7 +46,7 @@ A dynamic product listing page built with **Next.js**, **Axios**, and deployed o
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/product-listing-page.git
+git clone https://github.com/raghavharikesh/product-listing-page.git
 cd product-listing-page
 
 # 2. Install dependencies
@@ -132,7 +131,6 @@ Returns an array of product objects:
 
 ## 👤 Author
 
-- **Assignment:** React Assignment 2
 - **Framework:** Next.js (React)
 - **API:** Axios + FakeStore REST API
 
